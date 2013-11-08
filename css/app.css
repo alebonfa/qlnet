@@ -1,0 +1,81 @@
+body {
+    padding-top: 80px;
+    background-image:url("../images/fundoqualilog.png");
+    background-attachment: fixed;
+
+}
+
+.x-form-invalid-icon {
+    margin: 0 20px;
+}
+
+#gridpanel-1009_header{
+    width: auto !important;
+}
+#gridpanel-1009-body{
+    width : auto !important;
+    height: auto !important;
+}
+
+.hero-unit {
+    width:auto;
+    opacity: 0.85;
+    padding:15px;
+}
+.hero-unit h1{
+    margin-top:0;
+    padding-top:0;
+    color:#000000;
+    text-shadow:1px 1px 2px #ffffff;
+    opacity: 1;
+}
+.hero-unit p{
+    text-align:justify;
+    color:#000000;
+    text-shadow:1px 1px 2px #ffffff;
+    opacity: 1;
+}
+.my-hero {
+    padding:15px;
+    margin-bottom:30px;
+    font-size:18px;
+    font-weight:200;
+    line-height:30px;
+    color:inherit;
+    background-color:#eee;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px
+}
+
+.container-fluid {
+    position: relative;
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.container-fluid-dashboard, .container-fluid-dashboard-home{
+    position: relative;
+    width: 1024px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #fff;
+    opacity: 0.9;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px
+}
+
+.container-fluid-dashboard-home{
+    padding: 0px;
+}
+
+#qlsms_filtro02 {
+    background-color: #444;
+    margin-bottom: 20px;
+}
+
+#qlsms_lista01 {
+    background-color: #444;
+    margin-bottom: 20px;
+}

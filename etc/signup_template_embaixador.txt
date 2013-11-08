@@ -1,0 +1,10 @@
+Welcome {USERNAME}!
+Senha {SENHA}
+
+Thank-you for creating an account lalalalalal.
+
+Please confirm your account by copy and pasting the link below into your browsers address bar.
+
+{SITEPATH}/confirm.php?email={EMAIL}&chave={CHAVE}
+
+Thanks!

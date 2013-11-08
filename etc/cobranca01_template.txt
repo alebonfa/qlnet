@@ -1,0 +1,14 @@
+Prezado(a) Dr(a) {NOME}
+
+Ref. Vencimento(s): {VENCIMENTOS}
+
+Não consta, em nossos controles, o pagamento da fatura acima.
+Entre em contato conosco pelo 0300 210 6300 para que possamos solucionar essa pendência.
+Atenção: Caso o pagamento já tenha sido efetuado, queira por gentileza desconsiderar este aviso.
+(Comunicar por gentileza via e-mail).
+
+Cordialmente,
+Centro Bras. Pós Graduação Qualittas Ltda
+Depto. de Cobrança
+Vanessa Soares
+e-mail: financeirocr@qualittas.com.br
