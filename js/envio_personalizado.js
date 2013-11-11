@@ -301,7 +301,7 @@ Ext.onReady(function() {
 		columnWidth: .25,
 		format: 'd/m/Y',
 		submitFormat: 'Y-m-d',
-		style: 'margin-right:50px;',
+		style: 'margin-right:10px;',
 	});
 
 	var filt_df = Ext.create('Ext.form.field.Date', {
@@ -309,7 +309,7 @@ Ext.onReady(function() {
 		columnWidth: .25,
 		format: 'd/m/Y',
 		submitFormat: 'Y-m-d',
-		style: 'margin-right:50px;',
+		style: 'margin-right:10px;',
 	});
 
 	var filt_uf = Ext.create('Ext.form.field.ComboBox', {
@@ -419,7 +419,7 @@ Ext.onReady(function() {
 		title: 'Filtros',
 		frame: false,
 		renderTo: 'qlsms_filtro02',
-		width: 1160,
+		width: 984,
 		layout: 'column',
 		border: false,
 		bodyPadding: 20,
@@ -478,7 +478,7 @@ Ext.onReady(function() {
 		title: 'Filtros',
 		frame: false,
 		renderTo: 'qlsms_filtro02',
-		width: 1160,
+		width: 984,
 		layout: 'column',
 		border: false,
 		bodyPadding: 20,
@@ -507,7 +507,7 @@ Ext.onReady(function() {
 	var pnlFiltroColaboradores = Ext.create('Ext.form.Panel', {
 		title: 'Filtros',
 		renderTo: 'qlsms_filtro02',
-		width: 1160,
+		width: 984,
 		layout: 'column',
 		frame: false,
 		border: false,
@@ -537,20 +537,20 @@ Ext.onReady(function() {
 		store: ds_remetente,
 		columnWidth: 1,
 		columns: [
-			{ text: 'Nome', dataIndex: 'nome', width: 380},
-			{ text: 'Cidade', dataIndex: 'cidade', width: 300},
+			{ text: 'Nome', dataIndex: 'nome', width: 320},
+			{ text: 'Cidade', dataIndex: 'cidade', width: 200},
 			{ text: 'UF', dataIndex: 'uf', width: 50},
-			{ text: 'e-mail', dataIndex: 'email', width: 240},
+			{ text: 'e-mail', dataIndex: 'email', width: 220},
 			{ text: 'Telefone', dataIndex: 'telefone', width: 100}
 		],
 		height: 200,
-		width: 1120
+		width: 984
 	});
 
 	var pnlListaRemetentes = Ext.create('Ext.form.Panel', {
 		title: 'Remetentes Selecionados',
 		renderTo: 'qlsms_lista02',
-		width: 1160,
+		width: 984,
 		layout: 'column',
 		frame: false,
 		border: false,
@@ -577,20 +577,20 @@ Ext.onReady(function() {
 		columnWidth: 1,
 		selType: 'checkboxmodel',
 		columns: [
-			{ text: 'Nome', dataIndex: 'nome', width: 380},
-			{ text: 'Cidade', dataIndex: 'cidade', width: 300},
+			{ text: 'Nome', dataIndex: 'nome', width: 320},
+			{ text: 'Cidade', dataIndex: 'cidade', width: 200},
 			{ text: 'UF', dataIndex: 'uf', width: 50},
-			{ text: 'e-mail', dataIndex: 'email', width: 240},
+			{ text: 'e-mail', dataIndex: 'email', width: 220},
 			{ text: 'Telefone', dataIndex: 'telefone', width: 100}
 		],
 		height: 400,
-		width: 1120
+		width: 984
 	});
 
 	var pnlListaDestinatarios = Ext.create('Ext.form.Panel', {
 		title: 'Destinatários',
 		renderTo: 'qlsms_lista01',
-		width: 1160,
+		width: 984,
 		layout: 'column',
 		frame: false,
 		border: false,
@@ -652,7 +652,7 @@ Ext.onReady(function() {
 	var pnlOperacaoEmail = Ext.create('Ext.form.Panel', {
 		title: 'e-mail',
 		renderTo: 'qlsms_operacao',
-		width: 1160,
+		width: 984,
 		height: 600,
 		layout: 'column',
 		frame: false,

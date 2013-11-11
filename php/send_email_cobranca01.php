@@ -15,8 +15,8 @@
 
 	$mailer = Swift_Mailer::newInstance($transport);
 	$message = Swift_Message::newInstance();
-	$message ->setSubject('Portal QualiLog');
-	$message ->setFrom(array('noreply@qualittas.com.br' => 'Portal QualiLog'));
+	$message ->setSubject('Qualittas - Cobrança');
+	$message ->setFrom(array('financeirocr3@qualittas.com.br' => 'Qualittas - Depto. Financeiro'));
 	$message ->setTo(array($emailTo => $emailNome));
 	
 	// $message ->setBody($body_plain_txt);
