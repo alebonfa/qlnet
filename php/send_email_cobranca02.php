@@ -2,12 +2,11 @@
 
 	$emailTo     = $_POST['email'];
 	$emailNome   = $_POST['nome'];
-	$vencimentos = $_POST['vencimentos'];
 
 	include_once 'swift/swift_required.php';
 
-	$body = format_email($emailNome, $vencimentos, 'html');
-	$body_plain_txt = format_email($emailNome, $vencimentos, 'txt');
+	$body = format_email($emailNome, 'html');
+	$body_plain_txt = format_email($emailNome, 'txt');
 
 	$transport = Swift_SmtpTransport::newInstance('smtp.qualittas.com.br', 587);
 	$transport ->setUsername('financeirocr3@qualittas.com.br');
@@ -32,17 +31,16 @@
 	return $result;
 
 
-	function format_email($nome, $vencimentos, $format){
+	function format_email($nome, $format){
 
 	//set the root
-	$root = $_SERVER['DOCUMENT_ROOT'].'/Qualilog/etc';
+	$root = $_SERVER['DOCUMENT_ROOT'].'/qualilog/etc';
 
 	//grab the template content
-	$template = file_get_contents($root.'/cobranca01_template.'.$format);
+	$template = file_get_contents($root.'/cobranca02_template.'.$format);
 			
 	//replace all the tags
 	$template = preg_replace('/\{NOME\}/', $nome, $template);
-	$template = preg_replace('/\{VENCIMENTOS\}/', $vencimentos, $template);
 		
 	//return the html of the template
 	return $template;

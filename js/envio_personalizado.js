@@ -541,7 +541,8 @@ Ext.onReady(function() {
 			{ text: 'Cidade', dataIndex: 'cidade', width: 200},
 			{ text: 'UF', dataIndex: 'uf', width: 50},
 			{ text: 'e-mail', dataIndex: 'email', width: 220},
-			{ text: 'Telefone', dataIndex: 'telefone', width: 100}
+			{ text: 'Telefone', dataIndex: 'telefone', width: 100},
+			{ text: 'Atrasos', dataIndex: 'vencimentos', width: 300}
 		],
 		height: 200,
 		width: 984
@@ -581,7 +582,8 @@ Ext.onReady(function() {
 			{ text: 'Cidade', dataIndex: 'cidade', width: 200},
 			{ text: 'UF', dataIndex: 'uf', width: 50},
 			{ text: 'e-mail', dataIndex: 'email', width: 220},
-			{ text: 'Telefone', dataIndex: 'telefone', width: 100}
+			{ text: 'Telefone', dataIndex: 'telefone', width: 100},
+			{ text: 'Atrasos', dataIndex: 'vencimentos', width: 300}
 		],
 		height: 400,
 		width: 984
@@ -616,7 +618,8 @@ Ext.onReady(function() {
 		fields: ['id', 'nome'],
 		data: [
 			{"id": 1, "nome": "Mensagem Personalizada"},
-			{"id": 2, "nome": "Carta de Cobrança"}
+			{"id": 2, "nome": "Carta de Cobrança - Campanha"},
+			{"id": 3, "nome": "Carta de Cobrança - Trivial"}
 		]
 	});
 
@@ -667,38 +670,55 @@ Ext.onReady(function() {
 			text: 'Enviar',
 			handler: function() {
 				ds_remetente.each(function(rec) {
-					if (modeloEmail.getValue() === 1) {
-						Ext.Ajax.request({
-							method: 'POST',
-							url: 'php/send_email.php',
-							params: {
-								'nome': rec.get('nome'),
-								'email': rec.get('email'),
-								'vencimentos': '01/01/2013, 01/02/2013'
-							},
-							success: function() {
-								alert('E-mail enviado!');
-							},
-							failure: function() {
-								alert('Algo Falhou!');
-							}
-						})
-					} else if (modeloEmail.getValue() === 2) {
-						Ext.Ajax.request({
-							method: 'POST',
-							url: 'php/send_email_cobranca01.php',
-							params: {
-								'nome': rec.get('nome'),
-								'email': rec.get('email'),
-								'vencimentos': rec.get('vencimentos')
-							},
-							success: function() {
-								alert('E-mail enviado!');
-							},
-							failure: function() {
-								alert('Algo Falhou!');
-							}
-						})
+					if (rec.get('email') != '') {
+						if (modeloEmail.getValue() === 1) {
+							Ext.Ajax.request({
+								method: 'POST',
+								url: 'php/send_email.php',
+								params: {
+									'nome': rec.get('nome'),
+									'email': rec.get('email'),
+									'vencimentos': '01/01/2013, 01/02/2013'
+								},
+								success: function() {
+									alert('E-mail enviado!');
+								},
+								failure: function() {
+									alert('Algo Falhou!');
+								}
+							})
+						} else if (modeloEmail.getValue() === 2) {
+							Ext.Ajax.request({
+								method: 'POST',
+								url: 'php/send_email_cobranca02.php',
+								params: {
+									'nome': rec.get('nome'),
+									'email': rec.get('email')
+								},
+								success: function() {
+									alert('E-mail enviado para ' + rec.get('nome') + '!');
+								},
+								failure: function() {
+									alert('Algo Falhou no Envio para ' + rec.get('nome') + ' + !');
+								}
+							})
+						} else if (modeloEmail.getValue() === 3) {
+							Ext.Ajax.request({
+								method: 'POST',
+								url: 'php/send_email_cobranca01.php',
+								params: {
+									'nome': rec.get('nome'),
+									'email': rec.get('email'),
+									'vencimentos': rec.get('vencimentos')
+								},
+								success: function() {
+									alert('E-mail enviado!');
+								},
+								failure: function() {
+									alert('Algo Falhou!');
+								}
+							})
+						}
 					}
 				})
 			}
